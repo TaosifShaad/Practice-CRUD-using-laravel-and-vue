@@ -24,7 +24,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(list, index) in state.lists.data" :key="list.id">
+                <tr class="table-light" v-for="(list, index) in state.lists.data" :key="list.id">
                     <th scope="row">{{ (state.page-1)*5 + ++index }}</th>
                     <td>{{ list.name }}</td>
                     <td>{{ list.email }}</td>
@@ -132,7 +132,7 @@ function deleteData(id) {
                 console.log('deleted');
                 getList(state.page);
             })
-            Swal.fire('Saved!', '', 'success')
+            Swal.fire('Deleted!', '', 'error')
         }
     })
 }

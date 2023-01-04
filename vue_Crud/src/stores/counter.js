@@ -23,7 +23,7 @@ export let EmployeeListView = defineStore('EmployeeData', {
     actions: {
         getEmployeeData() {
             axios.get('http://127.0.0.1/api/home').then(({data}) => {
-                console.log('sldkfjalfl');
+                console.log(data);
                 this.employeeArr = data;
             });
         }

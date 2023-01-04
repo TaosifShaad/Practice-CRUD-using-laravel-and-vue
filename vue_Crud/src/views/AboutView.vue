@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-    <!-- <h4>{{ state.item }}</h4> -->
+    <h4>{{ state.item }}</h4>
     <ul v-for="i in state.item" :key="i.id">
       <li>{{ i.name }}</li>
       <li>{{ i.email }}</li>
@@ -20,7 +20,7 @@ const state = reactive({
 const emp = EmployeeListView();
 emp.getEmployeeData();
 state.item = emp.employeeArr;
-console.log(state.item);
+console.log('item' + state.item);
 </script>
 
 <style scoped>
